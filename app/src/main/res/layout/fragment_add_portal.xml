@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPortalFragment">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_title"
+        app:layout_constraintBottom_toTopOf="@+id/addportal_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/addportal_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/url"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_url"
+        app:layout_constraintBottom_toTopOf="@+id/addportal_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addportal_title" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/addportal_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="http://"
+        app:layout_constraintBottom_toTopOf="@+id/addportal_button"
+        app:layout_constraintTop_toBottomOf="@+id/url"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/addportal_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add portal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
